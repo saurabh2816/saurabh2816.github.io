@@ -14,11 +14,9 @@ request.onreadystatechange = function() {
 		var doc = request.responseXML;
 		console.log(doc);
 		var item = doc.getElementsByTagName('item');
-		// for(var i=0; i<item.length; i++) {
-		// 	console.log()
-		// }
-		console.log(item[0].getElementsByTagName('title'));
-		console.log(item[0].getElementsByTagName('title')[0].innerHTML);
- 	}
+ 		for(var i=0; i<item.length; i++) {
+		console.log(item[i].getElementsByTagName('title')[0].innerHTML);
+ 		}
+	}
 }
 request.send();
