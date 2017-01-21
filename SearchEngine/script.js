@@ -11,8 +11,9 @@ request.open(method, url);
 
 function pressButton() {
 	if(request.status == 200 && request.readyState == 4){
-		var el = document.getElementbyId('update');
+		var el = document.getElementById('update');
 		el.innerHTML = request.responseText;
+		//document.writeln(request.responseText);
  	}
 }
 request.send();
