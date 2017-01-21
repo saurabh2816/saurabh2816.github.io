@@ -10,8 +10,8 @@ var	method = 'GET',
 request.open(method, url);
 
 request.onreadystatechange = function() {
-	if(request.status == 200 && request.readyState == 4){
-		console.log(request.responseXML.getElementsByName('channel').getElementsByTagName('title')[1]);
+	if(request.status === 200 && request.readyState === 4){
+		console.log(request.responseXML.getElementsByTagName('channel').getElementsByTagName('title')[1]);
  	}
 }
 request.send();
