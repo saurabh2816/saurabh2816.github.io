@@ -5,15 +5,13 @@ if(window.XMLHttpRequest) {
 	request = ActiveXObject("Microsoft.XMLHTTP");
 }
 var	method = 'GET',
-		url = 'data.txt';
+		url = 'techcrunch.xml';
 
 request.open(method, url);
 
-function pressButton() {
+request.onreadystatechange = function() {
 	if(request.status == 200 && request.readyState == 4){
-		var el = document.getElementById('update');
-		el.innerHTML = request.responseText;
-		//document.writeln(request.responseText);
+		console.log(request.responseXML);
  	}
 }
 request.send();
