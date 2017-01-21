@@ -13,7 +13,7 @@ request.onreadystatechange = function() {
 	if(request.status === 200 && request.readyState === 4){
 		var doc = request.responseXML;
 		console.log(doc);
-		// var item = doc.getElementsByTagName('item');
+		var item = doc.getElementsByTagName('item');
 		// for(var i=0; i<item.length; i++) {
 		// 	console.log()
 		// }
