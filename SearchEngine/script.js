@@ -11,7 +11,9 @@ request.open(method, url);
 
 request.onreadystatechange = function() {
 	if(request.status === 200 && request.readyState === 4){
-		console.log(request.responseXML.getElementsByTagName('channel').getElementsByTagName('title')[1]);
+		var doc = request.responseXML;
+		console.log(doc);
+		//console.log(doc.getElementsByTagName('channel'));
  	}
 }
 request.send();
