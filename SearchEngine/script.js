@@ -18,5 +18,5 @@ request.onreadystatechange = function() {
 		console.log(item[i].getElementsByTagName('title')[0].innerHTML);
  		}
 	}
-}
+} 
 request.send();
