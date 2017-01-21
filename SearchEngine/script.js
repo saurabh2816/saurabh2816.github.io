@@ -17,7 +17,7 @@ request.onreadystatechange = function() {
 		// for(var i=0; i<item.length; i++) {
 		// 	console.log()
 		// }
-		console.log(item[0].getElementsByTagName('title'));
+		console.log(item[0].getElementsByTagName('title')[0].innherHTML);
  	}
 }
 request.send();
