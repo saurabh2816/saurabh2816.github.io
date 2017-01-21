@@ -1,9 +1,7 @@
-var request = new XMLHttpRequest();
-
-//xhrReq.open(method, url, async);
-request.open("GET", "data.txt", false);
-request.send();
-
-//if(request.status == 200)
-console.log(request);
-console.log(request.status);
+console.log("hey");
+	var request = new XMLHttpRequest();
+	request.open('GET', 'data.txt', false);
+	request.send();
+			console.log(request);
+		document.writeln(request.responseText);
+	
