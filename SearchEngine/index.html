@@ -3,11 +3,20 @@
 <head>
 	<meta charset="utf-8" />
 	<title>JavaScript AJAX</title>
-	<script src="script.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 	<h1>AJAX Search Engine</h1>
+	<div id="searcharea">
+<!-- label because if you click on label it will activate the search bar -->
+		<label for="search">Live Search</label>
+		<p>Enter name or info</p>
+		<input type="search" name="search" id="search" placeholder="type a name" />
+	</div>
 <!--<button id='btn' onclick='pressButton()'>Press ME!!	</button>-->
 	<div id="update"></div>
-</body>
+	<script src="script.js" type="text/javascript"></script>
+
+<!-- </body> -->
 </html>
