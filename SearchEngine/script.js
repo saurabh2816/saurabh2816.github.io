@@ -8,5 +8,5 @@ $.getJSON('techcrunch.json', function(data) {
   // });
   // output += '</ul>';
   //$('#update').html(data);
-  console.log(data);
+  console.log(data.items[0].title);
 });
