@@ -9,7 +9,7 @@ $.getJSON('techcrunch.json', function(data) {
   // output += '</ul>';
   var items = data.items;
   for(var i=0; i<items.length; i++){
-    output += '<li>';
+    output += '<br><li>';
     output += '<a href="' + items[i].link + '">' + items[i].title + '</a>';
     output += '<br><img src="' + items[i].thumbnail + ' height="100" width="100"/>'
     output +=  items[i].description.replace(/<(?:.|\n)*?>/gm, '') + '<br> <br>';
