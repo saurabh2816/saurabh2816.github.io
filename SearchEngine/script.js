@@ -10,11 +10,16 @@ $('#search').keyup(function() {
     var items = data.items;
     for(var i=0; i<items.length; i++){
       if((items[i].title.search(myExp) != -1) || (items[i].description.search(myExp) != -1 ))  {
+
       output += '<br><li>';
       output += '<a href="' + items[i].link + '">' + '<h2>' + items[i].title + '</h2>' + '</a>';
-      output += '<br><img src="' + items[i].thumbnail + ' height="100" width="100"/>'
+
+      if(items[i].thumbnail != "")
+      output += '<br><img src="' + items[i].thumbnail + ' height="100" width="100"/>';
+
       output +=  items[i].description.replace(/<(?:.|\n)*?>/gm, '') + '<br> <br>';
       output += '</li>';
+
     }
   }
     $('#update').html(output);
