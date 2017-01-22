@@ -5,7 +5,7 @@ $('#search').keyup(function() {
   console.log(searchField);
   var myExp = new RegExp(searchField, "i"); // case insensitive search
 
-  $.getJSON('techcrunch.json', function(data) {
+  $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ftechcrunch.com%2Ffeed', function(data) {
     var output = "<ul class='seachresults'>";
     var items = data.items;
     for(var i=0; i<items.length; i++){
