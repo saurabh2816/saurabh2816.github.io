@@ -1,7 +1,81 @@
 body {
-  background: #68b1df;
+  background: #3c90c4;
 }
 
-img {
+#update img {
   float: left;
+  width: 80px;
+  margin-right: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#searcharea {
+  margin:  0 auto; /*center the searcharea */
+  text-align: center;
+  background: #d6a458;
+  padding: 2%;
+  width: 30%;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+
+#searcharea label{
+  font: bold 1.3em Arial;
+  text-transform: uppercase;
+  padding-bottom: 5%;
+  color: #981b40;
+}
+
+#searcharea p {
+  margin: 0;
+  line-height: 1em;
+  padding: 5%;
+}
+
+#searcharea input {
+  width: 80%;
+  text-align: center;
+}
+
+#update {
+  font-family: Georgia;
+  width: 70%;
+  margin: 0 auto; /*for center*/
+/*  border: 1px dotted #186259;*/
+}
+
+#update ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#update ul li {
+  width: 100%;
+  padding: 10px 20px;
+  background: #cfcfcf;
+  padding-bottom: 10px;
+  height: 120px;
+  overflow: hidden;
+  border-bottom: 1px dotted #CCC;
+}
+
+#update li:hover {
+  background: #c2baba;
+  min-height: 100px;
+  height: auto;
+  overflow: visible;
+}
+
+#update h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-family: Arial;
+  color: #990e4c;
 }
