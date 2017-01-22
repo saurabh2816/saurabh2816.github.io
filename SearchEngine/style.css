@@ -1,3 +1,8 @@
 body {
   background: #68b1df;
 }
+
+img {
+  float: left;
+  padding: 3%;
+}
