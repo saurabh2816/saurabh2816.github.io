@@ -20,12 +20,14 @@
 }
 #todo {
   list-style: none;
+
   line-height: 2em;
   padding: 3%;
-  margin: 10px 10px 10px 250px;
+  margin: 0 0 0 18%;
   width: 30%;
   float: left;
   border: 2px solid #eee;
+  border-radius: 10px;
   background: #75a6b5;
 }
 
@@ -33,9 +35,10 @@
   list-style: none;
   padding: 3%;
   line-height: 2em;
-  margin: 10px 240px 0px 0px;
+  margin: 0 18% 0 0 ;
   width: 30%;
   float: right; /*The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.*/
   border: 1px solid #eee;
+  border-radius: 10px;
   background: #d29d5e;
 }
