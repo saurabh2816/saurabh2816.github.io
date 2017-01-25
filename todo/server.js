@@ -10,6 +10,7 @@ function start() {
   var el = document.createElement('li');
   var input = document.createElement('input');
   var span = document.createElement('span');
+  span.setAttribute('id','li-items');
 
   // <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element.
   span.textContent = str;

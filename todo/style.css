@@ -7,19 +7,22 @@
 #task-container {
 
 }
-ul {
-    /*margin: auto;*/
-    display: inline-block;
-           margin: 0;
-           padding: 0;
-           display: inline-block;
-           /* For IE, the outcast */
 
+#li-items {
+  font-family: sans-serif;
+  font-size: 1.3em;
+}
+#list-title {
+  font-family: monospace;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 2em;
 }
 #todo {
   list-style: none;
+  line-height: 2em;
   padding: 3%;
-  margin: 10px 10px 10px 20px;
+  margin: 10px 10px 10px 250px;
   width: 30%;
   float: left;
   border: 2px solid #eee;
@@ -29,7 +32,7 @@ ul {
 #done{
   list-style: none;
   padding: 3%;
-  margin: 10px;
+  margin: 10px 240px 0px 0px;
   width: 30%;
   float: right; /*The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.*/
   border: 1px solid #eee;
