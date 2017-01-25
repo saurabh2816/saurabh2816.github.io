@@ -1,0 +1,25 @@
+{
+  "name": "learnyounode",
+  "version": "0.5.0",
+  "description": "implementation of art of node or nodeschool.io",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabh2816/learnyounode.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Saurabh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saurabh2816/learnyounode/issues"
+  },
+  "homepage": "https://github.com/saurabh2816/learnyounode#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
