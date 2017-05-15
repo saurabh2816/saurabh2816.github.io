@@ -1,0 +1,822 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  	background-color: #ffffff;
+  	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+#ww{
+  /*background-image: url('../img/reitz2.png');*/
+  width: 100%;
+  height: 400px;
+   /*max-width: 1920px;*/
+  background-size:cover;
+  padding-top: 70px;
+ 	padding-bottom: 70px;
+ 	background-color: #DCDCDC;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+h1 {
+	font-size: 35px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #1abc9c;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.navbar {
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+
+.navbar-inverse {
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+.navbar-inverse {
+	background-color: #a51c30;
+	border-color: #a51c30;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #222222;
+}
+
+.navbar-brand {
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-inverse .navbar-toggle {
+	border-color: transparent;
+}
+
+.progress-bar-theme {
+  background-color: #a51c30;
+}
+
+
+/* Helpers */
+
+.mt {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.pt {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+/* +++++ WRAP SECTIONS +++++ */
+
+
+
+
+#footer {
+	background-color: #2f2f2f;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#footer p {
+	color: white;
+}
+
+#footer h4 {
+	color: white;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+
+/* +++++ Color Wraps / Blog Page +++++ */
+
+#grey {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #f2f2f2;
+}
+
+#white {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #ffffff;
+}
+
+
+
+/* Blog Date*/
+bd {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #d2d2d2;
+	font-weight: 700;
+}
+
+/* Blog Author*/
+ba {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+/* Blog Quote */
+.bq {
+	font-size: 22px;
+	padding-top: 30px;
+}
+
+/* Blog Tags */
+bt {
+	font-size: 12px;
+}
+
+
+.zoom {
+    display:block;
+    position:relative;
+    overflow:hidden;
+    background:transparent url(../img/loader.gif) no-repeat center;
+}
+
+
+    .zoomOverlay {
+        position:absolute;
+        top:0; left:0;
+        bottom:0; right:0;
+        display:none;
+        background-image:url(../img/zoom.png);
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+
+.zoom2 {
+	opacity: 1;
+}
+
+.zoom2:hover {
+	opacity: 0.5;
+}
+
+/* glyphicon Configuration */
+
+.glyphicon {
+	font-size: 40px;
+	color: #1abc9c;
+}
+
+
+
+
+/*typewriter css*/
+
+/* text editor styles */
+.text-editor-wrap {
+  display: block;
+  /*margin: auto;*/
+  margin-top: 80px;
+  max-width: 530px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.title-bar {
+  padding: 5px 0;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 1.00em;
+  text-align: center;
+  /*text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;*/
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+  border-bottom: #6a6a6a 1px solid; }
+
+.text-body {
+  height: 250px;
+  background-color: black;
+  padding: 10px;
+  color: #f0f0f0;
+  text-shadow: #000 0px 1px 0px;
+  font-family: "Consolas", "Courier New", "Courier";
+  font-size: 1.40em;
+  line-height: 1.40em;
+  font-weight: 900;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+  /*css for tags */
+
+
+
+.tagss {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tagss li {
+  float: left;
+}
+
+.tagg {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tagg::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tagg::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tagg:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tagg:hover::after {
+   border-left-color: crimson;
+}
+
+/*sublime text*/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+.sublime {
+  min-height: 270px;
+  min-width: 200px;
+  max-width: 1000px;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background-color: #303030;
+  background-image: url(http://files.simey.me/sublime/sublime-bg-icons.png), url(http://files.simey.me/sublime/sublime-bg-expand.png), url(http://files.simey.me/sublime/sublime-bg-top.png), url(http://files.simey.me/sublime/sublime-bg-bottom.png);
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x;
+  background-position: top left, top right, top center, bottom center;
+  border-radius: 4px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+.sublime--fullscreen {
+  position: fixed;
+  left: 2em;
+  right: 2em;
+  top: 2em;
+  bottom: 2em;
+  margin: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  min-width: none;
+  max-height: none;
+  min-height: none;
+  z-index: 50;
+  transition: all 0.6s ease;
+}
+.sublime--fullscreen .sublime-project {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 60px;
+  bottom: 25px;
+  overflow: auto;
+}
+.sublime__button {
+  text-indent: -9999em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 24px;
+  height: 22px;
+  border-radius: 10px;
+  top: 0;
+  left: 2px;
+}
+.sublime__button--full {
+  left: auto;
+  right: 0;
+}
+.sublime__button--maxi {
+  left: 42px;
+}
+.sublime__title, .sublime__footer {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  height: 22px;
+  line-height: 22px;
+}
+.sublime__title {
+  color: #333;
+  text-shadow: 0 1px 1px white;
+}
+.sublime__footer {
+  color: #ccc;
+  font-weight: 300;
+  text-align: right;
+  position: absolute;
+  bottom: 1px;
+  right: 20px;
+  width: 150px;
+}
+
+.sublime-tabs {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: url(http://files.simey.me/sublime/sublime-tabs-bg.png);
+  overflow: hidden;
+}
+.sublime-tabs__tab {
+  position: relative;
+  display: inline-block;
+  height: 29px;
+  line-height: 23px;
+  margin: 6px 0 0 20px;
+  z-index: 1;
+  padding-right: 20px;
+  background: url(http://files.simey.me/sublime/sublime-tab-x-dark.png);
+  background-repeat: repeat-x;
+}
+.sublime-tabs__tab:before, .sublime-tabs__tab:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.sublime-tabs__tab:before {
+  width: 20px;
+  left: -20px;
+  background: url(http://files.simey.me/sublime/sublime-tab-l-dark.png);
+}
+.sublime-tabs__tab:after {
+  width: 20px;
+  right: -20px;
+  background: url(http://files.simey.me/sublime/sublime-tab-r-dark.png);
+}
+.sublime-tabs__tab.active {
+  z-index: 2;
+  background: url(http://files.simey.me/sublime/sublime-tab-x.png);
+}
+.sublime-tabs__tab.active:before {
+  background: url(http://files.simey.me/sublime/sublime-tab-l.png);
+}
+.sublime-tabs__tab.active:after {
+  background: url(http://files.simey.me/sublime/sublime-tab-r.png);
+}
+.sublime-tabs__link, .sublime-tabs__link:visited {
+  font-size: 12px;
+  color: #ddd;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+}
+.sublime-tabs__link:hover, .sublime-tabs__link:visited:hover {
+  color: white;
+}
+
+.sublime-tabs__tab--soon {
+  opacity: 0.8;
+}
+.sublime-tabs__tab--soon .sublime-tabs__link {
+  padding-right: 1.2em;
+  color: #999;
+}
+.sublime-tabs__tab--soon .sublime-tabs__link:after {
+  content: "\25cf";
+  height: 1em;
+  line-height: 1em;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin-top: -0.5em;
+}
+@media screen and (max-width: 500px) {
+  .sublime-tabs__tab--soon {
+    display: none;
+  }
+}
+
+.sublime-project {
+  font-family: "Source Code Pro", "Consolas", monospace;
+  padding: 15px 10px 25px;
+  display: none;
+}
+.sublime-project__title {
+  font-size: 1.3em;
+  font-weight: 900;
+  margin: 0 0 0 40px;
+  color: #eee;
+}
+.sublime-project__code {
+  background: transparent !important;
+  padding: 0.5em 0 2em 0em;
+}
+.sublime-project__code--indent {
+  padding: 0.5em 0 2em 1.8em;
+}
+.sublime-project.active {
+  display: block;
+}
+
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint {
+  display: block;
+  background-color: #333;
+}
+
+pre .nocode {
+  background-color: none;
+  color: #000;
+}
+
+pre .str {
+  color: #ffa0a0;
+}
+
+/* string  - pink */
+pre .kwd {
+  color: #f0e68c;
+  font-weight: bold;
+}
+
+pre .com {
+  color: #87ceeb;
+}
+
+/* comment - skyblue */
+pre .typ {
+  color: #98fb98;
+}
+
+/* type    - lightgreen */
+pre .lit {
+  color: #cd5c5c;
+}
+
+/* literal - darkred */
+pre .pun {
+  color: #fff;
+}
+
+/* punctuation */
+pre .pln {
+  color: #fff;
+}
+
+/* plaintext */
+pre .tag {
+  color: #f0e68c;
+  font-weight: bold;
+}
+
+/* html/xml tag    - lightyellow */
+pre .atn {
+  color: #bdb76b;
+  font-weight: bold;
+}
+
+/* attribute name  - khaki */
+pre .atv {
+  color: #ffa0a0;
+}
+
+/* attribute value - pink */
+pre .dec {
+  color: #98fb98;
+}
+
+/* decimal         - lightgreen */
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #AEAEAE;
+}
+
+/* IE indents via margin-left */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none;
+}
+
+/* Alternate shading for lines */
+pre, code {
+  font-family: "Source Code Pro", "Consolas", "Courier New", monospace;
+}
+
+pre {
+  font-size: 12px;
+  background: #303030;
+  border: 0px solid #cccccc;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: decimal;
+}
+
+pre .yellow * {
+  color: #f0e68c !important;
+}
+
+pre .white * {
+  color: #eee !important;
+}
+
+pre .green * {
+  color: #98fb98 !important;
+}
+
+pre .blue * {
+  color: #2aa1ec !important;
+}
+
+pre .pink * {
+  color: #ffa0a0 !important;
+}
+
+pre img {
+  vertical-align: top;
+  margin: 1.5em 0;
+  border-radius: 3px;
+}
+
+
+/*sublime text end */
+
+
+/*typewriter effect*/
+
+#home h1 p {
+    font-size: 42px;
+    font-weight: 400;
+  }
+  #home h1 strong {
+    font-size: 46px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #menu-button {
+    font-size: 12px;
+    left: 2.5em;
+    position: fixed;
+    top: 2.5em;
+    z-index: 2;
+  }
+
+  #home h1 p {
+    font-size: 38px;
+    font-weight: 400;
+  }
+  #home h1 strong {
+    font-size: 42px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #menu-button {
+    font-size: 10px;
+    left: 2.5em;
+    position: fixed;
+    top: 2.5em;
+    z-index: 2;
+  }
+
+  #home h1 p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  #home h1 strong {
+    font-size: 34px;
+  }
+
+  #contact button {
+    font-size: .7em;
+  }
+  #contact p {
+    font-size: .7em;
+  }
+}
+.dark-gray-background {
+  background-color: inherit;
+}
+
+.dark-gray-font {
+  color: #222426 !important;
+}
+
+.light-white-font {
+  color: #fdfdff;
+}
+
+.light-blue-background {
+  background-color: #edf9f9;
+}
+
+.middle-blue-font {
+  color: #a51c30 !important;
+}
+
+.middle-blue-background {
+  background-color: #a51c30;
+}
+
+.dark-blue-font {
+  color: #546a7b;
+}
+
+
+
+.container-fluid {
+  min-height: 100%;
+  padding: 0;
+}
+
+.fill {
+  height: 100%;
+  min-height: 100%;
+}
+
+
+.fixed-width {
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.email {
+  font-size: .9em;
+  height: 2.4em;
+  width: 8.7em;
+}
+
+.typed-cursor {
+  -webkit-animation: blink .7s infinite;
+  -moz-animation: blink .7s infinite;
+  animation: blink .7s infinite;
+  opacity: 1;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*typewriter ends*/

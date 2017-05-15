@@ -178,7 +178,7 @@ var quizQuestions = [
   var celebsData = [
            {
                type: "Matt Damon",
-               image_url: "http://img9.newslebrity.com/thumbnails/mx/2017-02-10/matt-damon-se-entero-de-que-george-clooney-sera-padre.jpeg",
+               image_url: "matt.jpeg",
                born: "8 October, 1970",
                locations: "Boston, Massachusetts",
                spouse: "Luciana Bozán Barroso",
@@ -187,7 +187,7 @@ var quizQuestions = [
 
            {
                type: "Ed Sheeran",
-               image_url: "http://img7.newslebrity.com/thumbnails/de/2017-03-03/ed-sheeran-schlug-justin-bieber-ins-gesicht.jpeg",
+               image_url: "ed.jpeg",
                born: "17 February, 1991",
                locations: "Framlingham, Suffolk, England",
                spouse: "Single",
@@ -196,7 +196,7 @@ var quizQuestions = [
 
           {
               type: "Emma Watson",
-              image_url: "http://thumbnails117.imagebam.com/53656/6c3ac0536559324.jpg",
+              image_url: "emma.jpg",
               born: "15 April, 1990",
               locations: "Paris, France",
               spouse: "Single",
@@ -206,7 +206,7 @@ var quizQuestions = [
 
           {
               type: "Jennifer Aniston",
-              image_url: "https://media4.s-nbcnews.com/j/newscms/2015_41/1252321/151007-jennifer-aniston-mbm_f8d9da133d1c610e6f74da6378714832.nbcnews-fp-1200-800.jpg",
+              image_url: "jennifer.jpg",
               born: "February 11, 1969",
               locations: "California, U.S.",
               spouse: "Justin Theroux ",
@@ -216,7 +216,7 @@ var quizQuestions = [
 
           {
               type: "Taylor Alison Swift",
-              image_url: "https://s-media-cache-ak0.pinimg.com/originals/f5/8a/ab/f58aab5c7786ce48e85c47e6e6e28654.jpg",
+              image_url: "taylor.jpg",
               born: "December 13, 1989",
               locations: "Pennsylvania, U.S.",
               spouse: "Single",
@@ -226,7 +226,7 @@ var quizQuestions = [
 
           {
               type: "Thomas Cruise Mapother IV",
-              image_url: "http://www.thecinemaholic.com/wp-content/uploads/2016/03/tom-cruise.jpg",
+              image_url: "tom.jpg",
               born: "July 3, 1962",
               locations: "New York, U.S.",
               spouse: "Single",

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Saurabh</title>
+
+    <!-- Bootstrap core CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script>
+    $(function() {
+      "use strict";
+
+      var app = app || {};
+
+      app.sublime = function() {
+
+        var activeClass = "active",
+
+            $sublime = $(".sublime"),
+
+            $tabs = $(".sublime-tabs__tab"),
+            $links = $(".sublime-tabs__link"),
+            $projects = $(".sublime-project"),
+
+            $footer = $(".sublime__footer"),
+            $title = $(".sublime__title"),
+            titleText = $title.text(),
+
+            $maxi = $(".js-sublime-maximise"),
+            $togg = $(".js-sublime-toggle"),
+            $mini = $(".js-sublime-minimise");
+
+        $maxi.add( $togg ).on("click", function() {
+
+          $sublime.css({
+            "-webkit-transition-duration":"0",
+            "-moz-transition-duration":"0",
+            "-ms-transition-duration":"0",
+            "transition-duration":"0",
+            "opacity":"0",
+            "left": "10em",
+            "right": "10em",
+            "top": "10em",
+            "bottom": "10em"
+          });
+
+          $sublime.toggleClass("sublime--fullscreen");
+
+          setTimeout(function() {
+            $sublime.css({
+              "-webkit-transition-duration":"",
+              "-moz-transition-duration":"",
+              "-ms-transition-duration":"",
+              "transition-duration":"",
+              "opacity":"",
+              "left": "",
+              "right": "",
+              "top": "",
+              "bottom": ""
+            });
+          },10);
+
+        });
+
+        $mini.on("click", function() {
+
+          $sublime.removeClass("sublime--fullscreen");
+
+        });
+
+        $(window).on("sublimetab", function(e,href) {
+        console.log(href);
+
+          var $link = $links.filter("[href=" +href.replace("/","\\/")+ "]"),
+              $tab = $link.closest(".sublime-tabs__tab");
+
+          $tab.trigger("activateTab",href);
+
+        });
+
+
+        $tabs.on("activateTab", function(e,href) {
+
+          href = href.split("/");
+
+          var $tab = $(this),
+              $project = $projects.filter("[data-project-name="+ href[href.length-1] +"]");
+
+          // reverse the z-order
+          $tabs
+          .each( function(k,v) {
+            $(v).css("z-index", $tabs.length - k);
+          })
+          .removeClass( activeClass );
+
+          $tab
+          .addClass( activeClass )
+          .css("z-index", $tabs.length + 1 );
+
+          $projects.removeClass( activeClass );
+
+          $project.addClass( activeClass );
+
+          $title.text( $tab.children(".sublime-tabs__link").text() + " - " + titleText);
+
+          $footer.text( $tab.children(".sublime-tabs__link").data("type") );
+
+        });
+
+        $tabs
+        .first()
+        .trigger("activateTab", $links.first().attr("href") );
+
+        $tabs.on("click",function(e){
+          if( $(this).find(".sublime-tabs__link").attr("href") !== "#" ) {
+            $(window).trigger("sublimetab", $(this).find(".sublime-tabs__link").attr("href") );
+          }
+        });
+
+      };
+
+      app.prettify = function() {
+        window.prettyPrint();
+      };
+
+      app.sublime();
+      app.prettify();
+
+
+
+
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SAURABH</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	<!-- +++++ Projects Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-8 col-lg-offset-2 ">
+				<h3>MITTENS - TWITTER FOR KITTENS <a href="https://mittens-meow.herokuapp.com"><button type="button" class="btn btn-success">Visit</button></a><br>
+</h3>
+				<hr>
+				<p>A social networking web application like Twitter with functionalities to add tweets, delete tweets and sign up for a new account. Sign up for new account to try.</p>
+        <ul class="tagss centered">
+        <li><a href="#" class="tagg">Angular.js</a></li>
+        <li><a href="#" class="tagg">Node.js</a></li>
+        <li><a href="#" class="tagg">MongoDB</a></li>
+        <li><a href="#" class="tagg">Bootstrap</a></li>
+        <li><a href="#" class="tagg">CSS</a></li>
+        <li><a href="#" class="tagg">JWT</a></li>
+        <li><a href="#" class="tagg">Moment.js</a></li>
+        <li><a href="#" class="tagg">Bcrypt.js</a></li>
+        <li><a href="#" class="tagg">Express</a></li>
+        </ul>
+        <!-- <hr> -->
+			</div>
+		</div>
+
+		<div class="row mt">
+			<div class="col-lg-8 col-lg-offset-2">
+
+
+      <h4>HIGHLIGHTS</h4>
+      <div class="list-group">
+      <a href="#" class="list-group-item">Ability to sign in and sign up</a>
+      <a href="#" class="list-group-item">Login passwords are encrypted using Bcrypt.js</a>
+      <a href="#" class="list-group-item">Session token generated using JWT</a>
+      <a href="#" class="list-group-item">Use of Angular for real time experience</a>
+      </div>
+
+    </div>
+
+    <div class="col-lg-8 col-lg-offset-2">
+      <br><h4>CODE</h4><br>
+
+
+        <div class="sublime">
+
+          <header class="sublime__title">~saurabh.rana</header>
+
+          <ul class="sublime-tabs">
+
+            <li class="sublime-tabs__tab">
+              <a href="#_github/mainjs" class="sublime-tabs__link" data-type="js" data-project="mainjs">server.js</a>
+            </li>
+            <li class="sublime-tabs__tab">
+              <a href="#_github/maincss" class="sublime-tabs__link" data-type="json" data-project="maincss">package.json</a>
+            </li>
+
+          </ul>
+
+          <button class="sublime__button sublime__button--full js-sublime-maximise" tabindex="-1">go fullscreen</button>
+          <button class="sublime__button sublime__button--maxi js-sublime-toggle" tabindex="-1">maximise</button>
+          <button class="sublime__button sublime__button--exit js-sublime-minimise" tabindex="-1">exit</button>
+
+          <div class="sublime-project" data-project-name="index">
+
+            <h4 class="sublime-project__title">HTML Example</h4>
+
+            <pre class="sublime-project__code prettyprint lang-html linenums">
+
+      &lt;ul&gt;
+         &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+         &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+         &lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+      &lt;/ul&gt;
+
+
+            </pre>
+
+          </div>
+
+
+          <div class="sublime-project" data-project-name="mainjs">
+
+            <h4 class="sublime-project__title">Server.js</h4>
+
+            <pre class="sublime-project__code prettyprint lang-js linenums">
+  var express = require('express');
+  var bodyParser = require('body-parser');
+  var MongoClient = require('mongodb').MongoClient; //Retrieve
+  var ObjectId = require('mongodb').ObjectId;
+  var app = express();
+  var db = null;
+  var bcrypt = require('bcryptjs');
+  var jwt = require('jwt-simple');
+  var moment = require('moment');
+
+var JWT_SECRET = 'saurabh';
+
+// Connect to the db
+  MongoClient.connect(process.env.MONGODB_URI||"mongodb://localhost:27017/mittens", function(err, dbconn) {
+    if(!err) {
+      console.log("We are connected");
+      db = dbconn;
+    }
+  });
+
+app.use(bodyParser.json()); // for parsing application/json, you have to include to res.send json
+  app.use(express.static('public'))
+
+app.get('/meows', function(req, res, next){
+      db.collection('meows', function(err, meowsCollection) {
+          meowsCollection.find().toArray(function(err, meows){
+            return res.json(meows);
+          });
+      });
+  });
+
+app.post('/meows', function(req, res, next){     //next to check for the databse error
+
+  console.log(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+  var token = req.headers['authorization'];
+    var user = jwt.decode(token, JWT_SECRET); //identifies tweet to a user who was given a token on login
+
+  db.collection('meows', function(err, meowsCollection) {
+
+      var newMeow = {
+          text: req.body.newMeow,
+          user: user._id,   // new meows will also have a user ID associated with them, so now we know which user tweeted that tweet
+          username: user.username,
+          date: moment().format("h:mma, D MMM YYYY")
+        };
+
+      meowsCollection.insert(newMeow, {w:1}, function(err, meows){
+          return res.send();
+        });
+    });
+  });
+
+app.put('/meows/remove', function(req, res, next){
+
+  var token = req.headers.authorization;
+    var user = jwt.decode(token, JWT_SECRET);     //identifies tweet to a user who was given a token on login
+
+  db.collection('meows', function(err, meowsCollection) { //collections are like tables in sql database
+        var meowId = req.body.meow._id;
+        meowsCollection.remove({_id: ObjectId(meowId), user: user._id}, {w:1}, function(err, meows){
+          return res.send();
+        });
+    });
+
+});
+
+app.post('/users', function(req, res, next){
+    db.collection('users', function(err, usersCollection) {  //defining a collecction
+
+    bcrypt.genSalt(10, function(err, salt) {
+      bcrypt.hash(req.body.password, salt, function(err, hash) {
+          // Store hash in your password DB.
+          var newUser = {
+            username : req.body.username,
+            password : hash
+          }
+
+      usersCollection.insert(newUser, {w:1}, function(err){
+            return res.send();
+          });
+        });
+      });
+    });
+  });
+
+app.put('/users/signin', function(req, res, next){
+    db.collection('users', function(err, usersCollection) {
+
+  usersCollection.findOne({username: req.body.username}, function(err, user){
+      bcrypt.compare(req.body.password, user.password, function(err, result) {
+          // result === true
+          if(result) {
+            var token = jwt.encode(user, JWT_SECRET);  // encode
+            return res.json({token: token});
+          }
+          else {
+            return res.status(400).send();
+          }
+        });
+      });
+    });
+  });
+
+app.listen(process.env.PORT || 3000, function () {
+    // var d = Date().toString().substring(4,Date().toString().length );
+    var d = moment().format("h:mma, D MMM YYYY");
+    console.log(d)
+  })
+
+            </pre>
+
+          </div>
+
+
+          <div class="sublime-project" data-project-name="maincss">
+
+            <h4 class="sublime-project__title">Package File</h4>
+
+            <pre class="sublime-project__code prettyprint lang-css linenums">
+  {
+    "name": "mittens",
+    "version": "0.0.1",
+    "description": "tweets for kittens",
+    "main": "server.js",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.17.1",
+      "express": "^4.15.2",
+      "jwt-simple": "^0.5.1",
+      "moment": "^2.18.1",
+      "mongodb": "^2.2.25"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "author": "saurabh",
+    "license": "ISC"
+  }
+
+      </pre>
+
+          </div>
+
+
+          <footer class="sublime__footer">Saurabh</footer>
+
+        </div> <!--end of sublime-->
+
+    </div>
+
+
+		</div><!-- /row -->
+
+	</div><!-- /container -->
+
+
+	<!-- +++++ Footer Section +++++ -->
+
+  <div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<h4>Address</h4>
+					<p>
+						4000 SW 37 Blvd,<br/>
+						Gainesville 32608, </br>
+            Florida.
+					</p>
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-3">
+					<h4>Around The Web</h4>
+					<p>
+            <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css">
+
+						<i class="fa fa-twitter" aria-hidden="true"></i><a href="http://www.twitter.com/saurabh_rana"> Twitter</a><br>
+            <i class="fa fa-github" aria-hidden="true"></i><a href="http://www.github.com/saurabh2816"> Github</a>
+					</p>
+
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-3">
+          <h4>Download Resume</h4>
+            <img src="assets/img/QRcode.png" >
+              <p><br>Download my resume by scanning the QR code</p> <br>
+              <!-- <div class="col-lg-2"> -->
+
+              <!-- </div> -->
+
+				</div><!-- /col-lg-3 -->
+
+        <div class="col-lg-3">
+          <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="saurabhsinghrana"><a class="LI-simple-link" href='https://www.linkedin.com/in/saurabhsinghrana?trk=profile-badge'>Saurabh Singh Rana</a></div>
+        </div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

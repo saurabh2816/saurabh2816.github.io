@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Saurabh</title>
+
+    <!-- Bootstrap core CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script>
+    $(function() {
+      "use strict";
+
+      var app = app || {};
+
+      app.sublime = function() {
+
+        var activeClass = "active",
+
+            $sublime = $(".sublime"),
+
+            $tabs = $(".sublime-tabs__tab"),
+            $links = $(".sublime-tabs__link"),
+            $projects = $(".sublime-project"),
+
+            $footer = $(".sublime__footer"),
+            $title = $(".sublime__title"),
+            titleText = $title.text(),
+
+            $maxi = $(".js-sublime-maximise"),
+            $togg = $(".js-sublime-toggle"),
+            $mini = $(".js-sublime-minimise");
+
+        $maxi.add( $togg ).on("click", function() {
+
+          $sublime.css({
+            "-webkit-transition-duration":"0",
+            "-moz-transition-duration":"0",
+            "-ms-transition-duration":"0",
+            "transition-duration":"0",
+            "opacity":"0",
+            "left": "10em",
+            "right": "10em",
+            "top": "10em",
+            "bottom": "10em"
+          });
+
+          $sublime.toggleClass("sublime--fullscreen");
+
+          setTimeout(function() {
+            $sublime.css({
+              "-webkit-transition-duration":"",
+              "-moz-transition-duration":"",
+              "-ms-transition-duration":"",
+              "transition-duration":"",
+              "opacity":"",
+              "left": "",
+              "right": "",
+              "top": "",
+              "bottom": ""
+            });
+          },10);
+
+        });
+
+        $mini.on("click", function() {
+
+          $sublime.removeClass("sublime--fullscreen");
+
+        });
+
+        $(window).on("sublimetab", function(e,href) {
+        console.log(href);
+
+          var $link = $links.filter("[href=" +href.replace("/","\\/")+ "]"),
+              $tab = $link.closest(".sublime-tabs__tab");
+
+          $tab.trigger("activateTab",href);
+
+        });
+
+
+        $tabs.on("activateTab", function(e,href) {
+
+          href = href.split("/");
+
+          var $tab = $(this),
+              $project = $projects.filter("[data-project-name="+ href[href.length-1] +"]");
+
+          // reverse the z-order
+          $tabs
+          .each( function(k,v) {
+            $(v).css("z-index", $tabs.length - k);
+          })
+          .removeClass( activeClass );
+
+          $tab
+          .addClass( activeClass )
+          .css("z-index", $tabs.length + 1 );
+
+          $projects.removeClass( activeClass );
+
+          $project.addClass( activeClass );
+
+          $title.text( $tab.children(".sublime-tabs__link").text() + " - " + titleText);
+
+          $footer.text( $tab.children(".sublime-tabs__link").data("type") );
+
+        });
+
+        $tabs
+        .first()
+        .trigger("activateTab", $links.first().attr("href") );
+
+        $tabs.on("click",function(e){
+          if( $(this).find(".sublime-tabs__link").attr("href") !== "#" ) {
+            $(window).trigger("sublimetab", $(this).find(".sublime-tabs__link").attr("href") );
+          }
+        });
+
+      };
+
+      app.prettify = function() {
+        window.prettyPrint();
+      };
+
+      app.sublime();
+      app.prettify();
+
+
+
+
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SAURABH</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	<!-- +++++ Projects Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-8 col-lg-offset-2 ">
+				<h3>EXPRESS MUSIC <a href=" https://express-music.herokuapp.com/"><button type="button" class="btn btn-success">Visit</button></a><br>
+</h3>
+				<hr>
+				<p>Effectively implemented middleware, consistent routing to modules, creating APIs and building flexible views in Express.js. Website uses EJS templating to render HTML and features a real-time feedback section made using AJAX.</p>
+        <ul class="tagss centered">
+        <li><a href="#" class="tagg">Node.js</a></li>
+        <li><a href="#" class="tagg">Express.js</a></li>
+        <li><a href="#" class="tagg">EJS</a></li>
+        <li><a href="#" class="tagg">AJAX</a></li>
+        <li><a href="#" class="tagg">Bootstrap</a></li>
+        <li><a href="#" class="tagg">HTML</a></li>
+        </ul>
+        <!-- <hr> -->
+			</div>
+		</div>
+
+		<div class="row mt">
+			<div class="col-lg-8 col-lg-offset-2">
+
+
+      <h4>HIGHLIGHTS</h4>
+      <div class="list-group">
+      <a href="#" class="list-group-item">Consistent routing to modules</a>
+      <a href="#" class="list-group-item">Building flexible views</a>
+      <a href="#" class="list-group-item">Using client-side templating language - EJS</a>
+      <a href="#" class="list-group-item">Organize Web app into MVC architecture</a>
+      </div>
+
+    </div>
+
+    <div class="col-lg-8 col-lg-offset-2">
+      <br><h4>CODE</h4><br>
+
+
+        <div class="sublime">
+
+          <header class="sublime__title">~saurabh.rana</header>
+
+          <ul class="sublime-tabs">
+
+            <li class="sublime-tabs__tab">
+              <a href="#_github/mainjs" class="sublime-tabs__link" data-type="js" data-project="mainjs">app.js</a>
+            </li>
+            <li class="sublime-tabs__tab">
+              <a href="#_github/index" class="sublime-tabs__link" data-type="js" data-project="index">index.js</a>
+            </li>
+            <li class="sublime-tabs__tab">
+              <a href="#_github/bands" class="sublime-tabs__link" data-type="js" data-project="bands">bands.js</a>
+            </li>
+            <li class="sublime-tabs__tab">
+              <a href="#_github/feedback" class="sublime-tabs__link" data-type="js" data-project="feedback">feedback.js</a>
+            </li>
+
+
+          </ul>
+
+          <button class="sublime__button sublime__button--full js-sublime-maximise" tabindex="-1">go fullscreen</button>
+          <button class="sublime__button sublime__button--maxi js-sublime-toggle" tabindex="-1">maximise</button>
+          <button class="sublime__button sublime__button--exit js-sublime-minimise" tabindex="-1">exit</button>
+
+
+          <div class="sublime-project" data-project-name="mainjs">
+
+            <h4 class="sublime-project__title">app.js</h4>
+
+            <pre class="sublime-project__code prettyprint lang-js linenums">
+var express = require('express');
+var reload = require('reload');
+var app = express();
+var dataFile = require('./data/data.json');
+
+//set environment variable for our application
+app.set('port', process.env.PORT || 3000);
+app.set('appData', dataFile); //make a variable that will be avaialbe to our entire app
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views/' );
+
+app.locals.siteTitle = 'Fav. Bands'; //siteTitle will be available in any of my views
+//the use method allows our application to use external routes as part of the application.
+app.locals.allBands = dataFile.bands;
+
+app.use(express.static('./public'));
+app.use(require('./routes/index'));
+app.use(require('./routes/bands'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
+
+var server = app.listen(app.get('port'), function() {
+  console.log("Server is running on " + app.get('port') + "...");
+});
+
+reload(server, app);
+            </pre>
+
+          </div>
+
+
+          <div class="sublime-project" data-project-name="index">
+
+            <h4 class="sublime-project__title">router/index.js</h4>
+
+            <pre class="sublime-project__code prettyprint lang-css linenums">
+  {var express = require('express');
+var router = express.Router(); //to work with external routes
+
+router.get('/', function(req, res) {
+   var data = req.app.get('appData'); //this route will now have access to data
+   var pagePhotos = [];
+   var pageBands = data.bands;
+
+  data.bands.forEach(function(item){
+    //pagePhotos = pagePhotos.concat(item.artwork); OR can be written my way
+    item.artwork.forEach(function(i) {
+      pagePhotos.push(i);
+    });
+  });
+
+  res.render('index', {
+    pageTitle: "Favorite Bands",
+    pageID: "home", //to identify the current page that i'm on
+    artwork: pagePhotos,
+    bands: pageBands,
+
+  }); //since i've specified my views folder it will look for index.ejs itself
+});
+
+
+      </pre>
+
+          </div>
+
+          <div class="sublime-project" data-project-name="bands">
+
+            <h4 class="sublime-project__title">routes/bands.js</h4>
+
+            <pre class="sublime-project__code prettyprint lang-js linenums">
+var express = require('express');
+var router = express.Router(); //to work with external
+router.get('/bands', function(req, res) {
+    var data = req.app.get('appData'); //this route will now have access to data
+    var pagePhotos = [];
+    var pageBands = data.
+   data.bands.forEach(function(item){
+     //pagePhotos = pagePhotos.concat(item.artwork); OR can be written my way
+     item.artwork.forEach(function(i) {
+       pagePhotos.push(i);
+     });
+
+   res.render('bands', {
+     pageTitle: "Bands",
+     artwork: pagePhotos,
+     bands: pageBands,
+     pageID: "speakerList" //to identify the current page that
+   });
+
+router.get('/bands/:bandid', function(req, res) {
+
+  var data = req.app.get('appData'); //this route will now have access to data
+  var pagePhotos = [];
+  var pageBands
+ data.bands.forEach(function(item){
+   //pagePhotos = pagePhotos.concat(item.artwork); OR can be written my way
+   if(item.shortname == req.params.bandid) //only the speaker that is added to the URL will be shown along with only it's artwork.
+   {
+     pageBands.push(item);
+     pagePhotos = pagePhotos.concat(item.artwork); //pagePhotos = pagePhotos.concat(item.artwork);
+    // console.log(pagePhotos);
+   }
+
+ res.render('bands', {
+   pageTitle: "Bands Info",
+   artwork: pagePhotos,
+   bands: pageBands,
+   pageID: "speakerDetail" //to identify the current page that
+ });
+});
+module.exports = router;
+
+            </pre>
+
+          </div>
+
+          <div class="sublime-project" data-project-name="feedback">
+
+            <h4 class="sublime-project__title">js/feedback.js</h4>
+
+            <pre class="sublime-project__code prettyprint lang-js linenums">
+  $(function() { //makes it load when the page is loaded
+    $.getJSON('api', updateFeedb
+    $('.feedback-form').submit(function(e) { //this will send most method to our api route
+      e.preventDefault();
+      $.post('api', {
+        name : $('#feedback-form-name').val(),
+        title : $('#feedback-form-title').val(),
+        message : $('#feedback-form-message').val()
+      }, updateFeedback);
+
+    $('.feedback-messages').on('click', function(e) {
+      if(e.target.className == 'glyphicon glyphicon-remove') {
+        $.ajax({
+          url : 'api/' + e.target.id,
+          type: 'DELETE',
+          success: updateFeedback
+        });
+      }
+
+    function updateFeedback(data) {//receives data from json request
+      var output = '';
+      $.each(data, function(key, item) {
+        output += '    < div class="feedback-item item-list media-list">';
+        output += '      < div class="feedback-item media">';
+        output += '      < div class="media-left">< button class="feedback-delete btn btn-xs btn-danger">< span id="' + key + '" class="glyphicon glyphicon-remove"></ span></ button></ div>
+        output += '        < div class="feedback-info media-body">';
+        output += '          < div class="feedback-head">';
+        output += '            < div class="feedback-title">'+ item.title +' < small class="feedback-name label label-info">'+item.name+'</ small></ div>';
+        output += '          </ div>';
+        output += '          < div class="feedback-message">'+ item.message +'</ div>';
+        output += '        </ div>';
+        output += '      </ div>';
+        output += '    </ div>
+      });
+      $('.feedback-messages').html(output);
+    }
+  });
+            </div>
+          </pre>
+
+          <footer class="sublime__footer">Saurabh</footer>
+
+        </div> <!--end of sublime-->
+
+    </div>
+
+
+		</div><!-- /row -->
+
+	</div><!-- /container -->
+
+
+	<!-- +++++ Footer Section +++++ -->
+
+  <div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<h4>Address</h4>
+					<p>
+						4000 SW 37 Blvd,<br/>
+						Gainesville 32608, </br>
+            Florida.
+					</p>
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-3">
+					<h4>Around The Web</h4>
+					<p>
+            <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css">
+
+						<i class="fa fa-twitter" aria-hidden="true"></i><a href="http://www.twitter.com/saurabh_rana"> Twitter</a><br>
+            <i class="fa fa-github" aria-hidden="true"></i><a href="http://www.github.com/saurabh2816"> Github</a>
+					</p>
+
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-3">
+          <h4>Download Resume</h4>
+            <img src="assets/img/QRcode.png" >
+              <p><br>Download my resume by scanning the QR code</p> <br>
+              <!-- <div class="col-lg-2"> -->
+
+              <!-- </div> -->
+
+				</div><!-- /col-lg-3 -->
+
+        <div class="col-lg-3">
+          <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="saurabhsinghrana"><a class="LI-simple-link" href='https://www.linkedin.com/in/saurabhsinghrana?trk=profile-badge'>Saurabh Singh Rana</a></div>
+        </div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
