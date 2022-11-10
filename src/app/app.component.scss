@@ -1,0 +1,18 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import 'material-icons/iconfont/material-icons.scss';
+@import '../app/movie-carousel/movie-carousel.component.scss';
+@import '../app/custom-video/custom-video.component.scss';
+@import '../app/home/home.component.scss';
+
+
+$background-color: #182f38;
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #182f38 !important;
+    // background-color: #0f2027 !important;
+}
+
+.modal-open .modal {
+    z-index: 1000 !important;
+}

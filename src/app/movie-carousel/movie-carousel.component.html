@@ -1,0 +1,143 @@
+<!-- <app-custom-video *ngIf="clickPlay" [url]="movieClicked.link"></app-custom-video> -->
+
+<swiper class="mt-5"
+#swiperVirtualRef2
+[slidesPerView]="5"
+[spaceBetween]="20"
+slideActiveClass="swiper-active"
+[navigation]="true"
+[slidesPerGroup]="4"
+[speed]="600"
+[parallax]="true"
+id="mySwiperID2"
+>
+<ng-template swiperSlide *ngFor="let movie of data; index as i">
+  <div class="card2">
+    <div class="card__image" (click)="triggerModal(movieModal, movie)" [ngStyle]="{background: 'url(' + movie.poster + ')'}">
+     
+      <h3>{{ movie.title }}</h3>
+      <div class="card__heading-sub">
+        <span class="actor">{{ getTwoActors(movie.actors) }} </span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel__row panel__buttons">
+        <div class="panel__icons">
+          <a  (click)="playMovie(movie)">
+            <i class="fa fa-play-circle" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="panel__icons">
+         <div class="imdbRating"> 
+           <img class="imdbLogo" src="../../assets/imdbLogo.svg" alt="">
+          <div class="movieRating">{{movie.imdbRating}}</div>
+         </div>
+        </div> 
+
+
+        <div class="panel__icons card-modal-spawn">
+          <i class="fa fa-chevron-down open-modal" (click)="triggerModal(movieModal, movie)" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="panel__row info">
+        <span class="rating"><b>{{movie.rated}}</b></span><span class="year">{{movie.year}}</span><b>{{movie.runtime}}</b>
+      </div>
+      <div class="panel__row genres">{{getMovieGenres(movie.genre)}}r</div>
+    </div>
+  </div>
+</ng-template>
+
+</swiper>
+
+
+
+<!-- MODAL  -->
+<div>
+<!-- <button class="btn btn-danger" (click)="triggerModal(movieModal)">Open Modal</button> -->
+<!-- <button class="btn btn-danger">Open Modal</button> -->
+
+<ng-template #movieModal let-modal>
+
+  <div class="movieModal">
+    <div class="modal-body">
+    
+    <div class="movie" id="movie-card">
+
+      <div class="movie__wrapper" id="movie-data">
+        
+        <div class="moive__poster__wrapper">
+          <div class="movie__poster" style="background-image:url({{modalMovie.poster}})">
+            <!-- <span class="movie__poster--featured">
+              <img src={{modalMovie.poster}}>
+            </span> -->
+          </div>
+          <div class="movie__playbutton">
+            <span class="material-icons playbutton">play_circle_filled</span> 
+
+          </div>
+        </div>
+ 
+
+        <div class="movie__details">
+          <div class="left-container">
+         
+            <h2 class="movie-title">{{modalMovie.title}}</h2>
+         
+            <div class="movie-tags">
+              <div class="movie-rated">{{modalMovie.rated}}</div>
+              <div class="movie-year">{{modalMovie.year}}</div>
+              <div class="movie-genre">{{modalMovie.genre}}</div>
+              <div class="movie-runtime">{{modalMovie.runtime}}</div> 
+            </div>
+  
+            <div class="movie-plot">
+              <div class="movie-plot">
+                <p>{{modalMovie.plot}}</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="right-container">
+            <div class="movie-cast">
+              <h3 class="movie-cast__heading">Cast</h3>
+              <div class="movie-cast__actors">{{modalMovie.actors}}</div>
+            </div>
+<br/>
+            <div class="movie-genre">
+              <h3 class="movie-genre__heading">Genre</h3>
+              <div class="movie-genre__genre">{{modalMovie.genre}}</div>
+            </div>
+<br/>
+            <div class="movie-rating">
+              <h3 class="movie-rating__heading">Ratings</h3>
+              <div class="movie-rating__wrapper">
+                <div class="movie-rating__metascore">
+                  Metascore: {{modalMovie.metascore}}
+                </div>
+                <div class="movie-rating__imdbRating">
+                  Imdb Rating: {{modalMovie.imdbRating}}
+                </div>
+              </div>
+            </div>
+
+            
+            
+          </div>
+
+        </div>
+
+      </div>
+      <!-- <input class="movie__search" id="movie-search" type="text" placeholder="Enter a movie title"> -->
+    </div>
+
+  </div>
+
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+  </div> -->
+</div>
+
+</ng-template>
+</div>
