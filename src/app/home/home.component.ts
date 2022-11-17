@@ -9,7 +9,6 @@ export class HomeComponent implements OnInit {
 
   data: any;
   getMoviesLoaded: boolean = false;
-  defaultCardPoster: string = "saurabhrana.com";
 
   constructor(private movieService: MovieService) { }
 

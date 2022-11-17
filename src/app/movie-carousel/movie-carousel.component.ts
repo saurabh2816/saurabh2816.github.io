@@ -53,7 +53,9 @@ export class MovieCarouselComponent implements OnInit {
   movieClicked: Movie;
   show: boolean;
   modalMovie: any;
-  movdalMovieLink: any;
+  modalMovieLink: any;
+  isModalOpen = false;
+  modalReference: any;
 
   closeModal: string; // modal
 
@@ -65,10 +67,12 @@ export class MovieCarouselComponent implements OnInit {
 
 
   // modal functions
-  triggerModal(content: any, data: any) {
-    this.modalMovie = data;
-    this.movdalMovieLink = data.link;
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((res) => {
+  triggerModal(content: any, movie: any) {
+    this.modalMovie = movie;
+    this.modalMovieLink = movie.link;
+    this.modalReference = this.modalService.open(content);
+    this.modalService.open(content).result.then((res) => {
+      this.isModalOpen = true;
       this.closeModal = `Closed with: ${res}`;
     }, (res) => {
       this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
@@ -83,6 +87,10 @@ export class MovieCarouselComponent implements OnInit {
 
   
   playMovie(movie: Movie) {
+    // if(this.isModalOpen) {
+    //   this.isModalOpen = false;
+      this.modalService.dismissAll();
+    // }
     this.clickPlay = true;
     this.movieClicked = movie;
 
