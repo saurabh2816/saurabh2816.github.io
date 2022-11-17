@@ -70,8 +70,8 @@ export class MovieCarouselComponent implements OnInit {
   triggerModal(content: any, movie: any) {
     this.modalMovie = movie;
     this.modalMovieLink = movie.link;
-    this.modalReference = this.modalService.open(content);
-    this.modalService.open(content).result.then((res) => {
+    // this.modalReference = this.modalService.open(content);
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((res) => {
       this.isModalOpen = true;
       this.closeModal = `Closed with: ${res}`;
     }, (res) => {

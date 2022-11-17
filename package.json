@@ -22,6 +22,7 @@
     "@angular/router": "~13.3.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
+    "lodash": "^4.17.21",
     "material-icons": "^1.10.8",
     "ngx-simple-modal": "^1.4.17",
     "ngx-videogular": "^13.2.4",

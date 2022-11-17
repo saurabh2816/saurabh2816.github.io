@@ -1,8 +1,12 @@
-// .movie-cards {
-//     display: flex;
-//     justify-content: space-between;
+.movie {
 
-//     app-movie-card {
-//         display: flex;
-//     }
-// }
+    &-category {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-left: 4rem;
+        position: relative;
+        top: 2rem;
+    }
+}
