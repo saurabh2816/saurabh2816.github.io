@@ -94,6 +94,7 @@ export class MovieCarouselComponent implements OnInit {
     this.clickPlay = true;
     this.movieClicked = movie;
 
+    console.log("movie.link: ", movie.link);
     this.router.navigate(['/play'], { queryParams: { url: movie.link } });
 
   }
