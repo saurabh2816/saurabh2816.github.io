@@ -5,6 +5,6 @@
 export const environment = {
   production: false,
   // apiURL : "https://opensourceflix.herokuapp.com/api/v1/"
-  apiURL : "http://localhost:8080/api/v1/"
-  // apiURL : "https://openflix-app.herokuapp.com/api/v1/"
+  // apiURL : "http://localhost:8080/api/v1/"
+  apiURL : "https://openflix-app.herokuapp.com/api/v1/"
 };
