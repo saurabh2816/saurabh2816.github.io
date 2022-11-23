@@ -13,7 +13,7 @@ import { SwiperModule } from 'swiper/angular';
 import { SimpleModalModule } from 'ngx-simple-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 
@@ -39,7 +39,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     SimpleModalModule,
     NgbModule
   ],
-  providers: [MovieService, { provide: LocationStrategy, useClass: PathLocationStrategy } ],
+  providers: [MovieService, { provide: LocationStrategy, useClass: HashLocationStrategy } ],
   bootstrap: [AppComponent],
   
 })
