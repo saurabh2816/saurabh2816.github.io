@@ -20,10 +20,10 @@ export class CustomVideoComponent implements OnInit {
     console.log("custom player url: ", this.url);
     this.url = this.route.snapshot.queryParamMap.get('url');
     console.log("custom player url: ", this.url);
-
+    window.scroll(0,0);
     setTimeout(()=>{                           //<<<---using ()=> syntax
       this.animationDone = true;
-     }, 4000);
+     }, 3500);
     
   }
 
