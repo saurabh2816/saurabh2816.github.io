@@ -12,6 +12,7 @@ import { MovieService } from './services/movie.service';
 import { SwiperModule } from 'swiper/angular';
 import { SimpleModalModule } from 'ngx-simple-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     CustomVideoComponent,
     HomeComponent,
-    MovieCarouselComponent
+    MovieCarouselComponent,
+    ErrorPageComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
