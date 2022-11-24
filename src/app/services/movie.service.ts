@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, retry, throwError } from "rxjs";
 import { Movie } from "../model/Movie";
@@ -20,6 +20,21 @@ export class MovieService {
       return this.http.get<any>(this.apiURL + 'saveAllMoviesFromALink')
       .pipe(retry(1), catchError(this.handleError))
     }
+
+    getSubtitleFromLink(strLink: any) {  
+    
+      // let headers = new HttpHeaders({
+      //   'Accept': 'text/plain',
+      //   'Content-Type': 'text/plain'
+      // });
+    
+      const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
+
+
+      return this.http.get(strLink,{ headers, responseType: 'text'})
+      .pipe(retry(1), catchError(this.handleError));
+      
+    } 
 
 
     handleError(error: any) {

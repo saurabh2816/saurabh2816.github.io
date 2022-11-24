@@ -246,19 +246,24 @@
         <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time> 
     </vg-scrub-bar>
 
+
+
     <vg-controls [vgAutohideTime]="5">
         
         <div class="left-container">
             <vg-play-pause></vg-play-pause>
-            
+            <!-- <vg-fullscreenButton></vg-fullscreenButton> -->
             <!-- subtitles -->
             <!-- <vg-track-selector></vg-track-selector> -->
             <vg-mute></vg-mute>
             <vg-volume></vg-volume>
             <vg-playback-button></vg-playback-button>
+            
         </div>
 
     <div class="right-container">
+        <vg-text src="../../assets/1.vtt"></vg-text>
+        <vg-track-selector></vg-track-selector>
         <vg-fullscreen></vg-fullscreen>
     </div>        
     
@@ -266,7 +271,8 @@
 
     <video [vgMedia]="$any(media)" #media id="my-video" preload="true" autoplay="true" >
         <!-- <source src="https://www.ibrahimabah.com/ibfilms/Harry.Potter-The.Ultimate.Collection.%20I%20-%20VIII%20.%202001-2011.1080p.Bluray.x264.anoXmous/Harry%20Potter%203/Harry.Potter.And.The.Prisoner.Of.Azkaban.2004.UEE.1080p.Bluray.x264.anoXmous_.mp4" type="video/mp4"> -->
-        <source src={{url}} type="video/mp4">
+        <source src={{url}} type="video/mp4" >
+        <track src={{srt}} kind="subtitles" srclang="en" label="English" type="text"/>
     </video>
 </vg-player>
 </div>
