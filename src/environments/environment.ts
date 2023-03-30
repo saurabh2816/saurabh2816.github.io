@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL : "https://web-production-42ed.up.railway.app/api/v1/"
+  apiURL : "http://openflixapi-production.up.railway.app/api/v1/"
   // apiURL : "http://localhost:8080/api/v1/"
   // apiURL : "https://openflix-app.herokuapp.com/api/v1/"
 };
