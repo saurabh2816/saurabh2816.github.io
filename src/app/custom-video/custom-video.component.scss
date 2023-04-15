@@ -1231,3 +1231,50 @@ body {
 .animation-done {
     display: none !important;
 }
+
+::ng-deep .back-arrow {
+  display: flex;
+  background: white !important;
+  z-index: 1000;
+}
+
+::ng-deep .fa-arrow-left:before {
+  content: "\f060";
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  padding: 2rem;
+  color: #626262;
+}
+
+vg-buffering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+} 
+
+
+::ng-deep .vg-buffering .loadingSpinner {
+  background-color: #0000 !important;
+  border: 10px solid rgba(255,255,255,1) !important;
+  opacity: 0.9 !important;
+  border-top: 10px solid rgb(229 9 20) !important;
+  // border-left: 10px solid rgba(0,0,0,0) !important;
+  border-radius: none;
+  box-shadow: 0 0 35px #fff !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  margin: 0 auto !important;
+  animation: rotate 4s linear infinite !important;
+  // background: url('../../assets/loading.svg') !important;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

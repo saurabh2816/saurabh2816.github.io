@@ -13,6 +13,8 @@ id="mySwiperID2"
 >
 <ng-template swiperSlide *ngFor="let movie of data; index as i">
   <div class="card2">
+    <img class="image_card" src={{movie.poster}} loading="lazy"/>
+    <!-- <div class="card__image" (click)="triggerModal(movieModal, movie)"> -->
     <div class="card__image" (click)="triggerModal(movieModal, movie)" [ngStyle]="{background: 'url(' + movie.poster + ')'}">
      
       <h3>{{ movie.title }}</h3>

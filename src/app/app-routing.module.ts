@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { SaveMoviesComponent } from './save-movies/save-movies.component';
 import { CustomVideoComponent } from './custom-video/custom-video.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,9 +14,7 @@ const routes: Routes = [
   { path: '**', component: ErrorPageComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
-
-
