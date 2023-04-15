@@ -7,8 +7,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/openflix', pathMatch: 'full' },
+  { path: 'openflix', component: HomeComponent },
   { path: 'play', component: CustomVideoComponent },
   { path: 'saveAllMoviesFromALink', component: SaveMoviesComponent },
   { path: '**', component: ErrorPageComponent },
