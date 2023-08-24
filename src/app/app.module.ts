@@ -14,6 +14,7 @@ import { SimpleModalModule } from 'ngx-simple-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { S3Service } from './digial-ocean/digial-ocean.component';
 
 
 
@@ -24,7 +25,8 @@ import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@a
     CustomVideoComponent,
     HomeComponent,
     MovieCarouselComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    S3Service
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
