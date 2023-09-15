@@ -2,13 +2,171 @@
     <div class="movie-category">All Movies</div>
     <app-movie-carousel *ngIf="getMoviesLoaded" [data]="data" class="movie-carousel"></app-movie-carousel>
 </div> -->
-<h1 class="page-heading">OpenFlix</h1>
-<div class="movie-carouesl">
-    <div class="movie-category">Action</div>
-    <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByAction" class="movie-carousel"></app-movie-carousel>
-</div>
+<div class="parent-container">
+    <h1 class="page-heading">OpenFlix</h1>
+    <div class="movie-carouesl">
+        <!-- <div class="movie-category">Action</div> -->
+        <app-movie-carousel [data]="data" class="movie-carousel"></app-movie-carousel>
+    </div>
 
-<!-- <div class="movie-carouesl">
+    <div class="accordion" id="accordionExample">
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    High Level Design
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="image-wrapper">
+                        <img src="../../assets/architecture.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What Does The App Do?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p class="card-text">1. A scheduled task is executed daily to retrieve the latest movie entries from
+                        the S3 storage.</p>
+                    <p class="card-text">2. Upon retrieval, the Openflix API identifies and compiles a list of files
+                        that
+                        require processing.</p>
+                    <p class="card-text">3. The identified files are then queued into RabbitMQ for further processing.
+                    </p>
+                    <p class="card-text">4. The OMDBService subsequently dequeues these files from RabbitMQ, fetches the
+                        corresponding IMDB metadata, and persists this data into the database.</p>
+                    <p class="card-text">5. Following any database update, the Redis cache is promptly refreshed to
+                        reflect
+                        the latest changes.</p>
+                    <p class="card-text">6. User requests are efficiently handled by retrieving data directly from the
+                        Redis cache, ensuring swift response times.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+ 
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Tech Stack
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body tech-stack">
+                    <p class="card-text">- Spring Boot</p>
+                    <p class="card-text">- RabbitMQ</p>
+                    <p class="card-text">- Redis</p>
+                    <p class="card-text">- MySQL</p>
+                    <!-- <div class="card" style="width: 18rem;">
+                        <div class="card-image">
+                            <img src="https://www.svgrepo.com//show/354380/spring-icon.svg"
+                                class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Spring Boot</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/RabbitMQ_logo.svg/2560px-RabbitMQ_logo.svg.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">RabbitMQ</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-image">
+                            <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" class="card-img-top"
+                                alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Redis</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-image">
+                            <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" class="card-img-top"
+                                alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">MySQL</h5>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How To Use?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="image-wrapper">
+                        <img src="./../../assets/use.png" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- <div class="instructions-container">
+
+        <div class="card">
+            <div class="card-header">
+                High Level Design
+            </div>
+            <div class="card-body">
+                <div class="image-wrapper">
+                    <img src="../../assets/architecture.jpg" />
+                </div>
+                <div class="instructions-wrapper">
+
+                    <p class="card-text">A job runs once a day to fetch new movies from the S3 store.</p>
+                    <p class="card-text">2. Openflix API upon receiving the list of files creates a list of new files
+                        that needs to be parse. </p>
+                    <p class="card-text">3. These new files are pushed to RabbitMQ</p>
+                    <p class="card-text">4. OMDBService consumes these files from RabbitMQ and fetches IMDB meta data
+                        for these files and saves it to the database.</p>
+                    <p class="card-text">6. Redis cache is updated on database update</p>
+                    <p class="card-text">7. When user makes a request it is served from the Redis cache</p>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="movie-carouesl">
     <div class="movie-category">Adventure</div>
     <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByAdventure" class="movie-carousel"></app-movie-carousel>
 </div>
@@ -17,18 +175,19 @@
     <div class="movie-category">Comedy</div>
     <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByComedy" class="movie-carousel"></app-movie-carousel>
 </div> -->
+    <!-- 
+    <div class="movie-carouesl">
+        <div class="movie-category">Drama</div>
+        <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByDrama" class="movie-carousel"></app-movie-carousel>
+    </div>
 
-<div class="movie-carouesl">
-    <div class="movie-category">Drama</div>
-    <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByDrama" class="movie-carousel"></app-movie-carousel>
+    <div class="movie-carouesl">
+        <div class="movie-category">Thriller</div>
+        <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByThriller"
+            class="movie-carousel"></app-movie-carousel>
+    </div> -->
+
 </div>
-
-<div class="movie-carouesl">
-    <div class="movie-category">Thriller</div>
-    <app-movie-carousel *ngIf="getMoviesLoaded" [data]="moviesByThriller" class="movie-carousel"></app-movie-carousel>
-</div> 
-
-
 
 <!-- <app-custom-video></app-custom-video>  -->
 

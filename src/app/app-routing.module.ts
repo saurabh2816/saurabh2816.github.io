@@ -5,6 +5,7 @@ import { SaveMoviesComponent } from './save-movies/save-movies.component';
 import { CustomVideoComponent } from './custom-video/custom-video.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/openflix', pathMatch: 'full' },

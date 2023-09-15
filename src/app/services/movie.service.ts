@@ -12,7 +12,7 @@ export class MovieService {
     constructor(private http: HttpClient) {}
 
     getMovies(): Observable<Movie[]> {
-        return this.http.get<Movie[]>(this.apiURL + 'movies/1080p')
+        return this.http.get<Movie[]>(this.apiURL + 'getAllFromMovies')
         .pipe(retry(1), catchError(this.handleError))
     }
 

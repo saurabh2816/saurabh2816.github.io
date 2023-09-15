@@ -44,59 +44,59 @@ export class HomeComponent implements OnInit {
       //   console.log(subs);
       //  })
   
-      this.data.forEach( (movie: Movie) => {
+      // this.data.forEach( (movie: Movie) => {
 
-          if(movie.genre.includes("Action")) {
-            this.moviesByAction.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Action")) {
+      //       this.moviesByAction.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Comedy")) {
-            this.moviesByComedy.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Comedy")) {
+      //       this.moviesByComedy.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Adventure")) {
-            this.moviesByAdventure.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Adventure")) {
+      //       this.moviesByAdventure.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Drama")) {
-            this.moviesByDrama.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Drama")) {
+      //       this.moviesByDrama.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Crime")) {
-            this.moviesByCrime.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Crime")) {
+      //       this.moviesByCrime.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Thriller")) {
-            this.moviesByThriller.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Thriller")) {
+      //       this.moviesByThriller.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Horror")) {
-            this.moviesByHorror.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Horror")) {
+      //       this.moviesByHorror.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Sci-Fi")) {
-            this.moviesBySciFi.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Sci-Fi")) {
+      //       this.moviesBySciFi.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Romance")) {
-            this.moviesBySciFi.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Romance")) {
+      //       this.moviesBySciFi.push(movie);
+      //       return;
+      //     }
 
-          if(movie.genre.includes("Animation")) {
-            this.moviesBySciFi.push(movie);
-            return;
-          }
+      //     if(movie.genre.includes("Animation")) {
+      //       this.moviesBySciFi.push(movie);
+      //       return;
+      //     }
           
-      });
+      // });
 
     })
   } 

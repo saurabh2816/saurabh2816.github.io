@@ -14,6 +14,7 @@ import { SimpleModalModule } from 'ngx-simple-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ResumeComponent } from './resume/resume.component';
 
 
 
@@ -24,7 +25,8 @@ import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@a
     CustomVideoComponent,
     HomeComponent,
     MovieCarouselComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ResumeComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [

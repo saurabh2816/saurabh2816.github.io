@@ -18,3 +18,77 @@
     justify-content: center;
     margin: 0 auto;
 }
+
+
+$background-color: #182f38;
+
+.parent-container {
+    font-family: "Netflix Sans", sans-serif;
+    background-color: #182f38;
+    // background-color: #0f2027 !important;
+    // height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.instructions-container {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+
+    .image-wrapper {
+        display: flex;
+        flex-basis: 75%;
+        margin-right: 2rem;
+    }
+
+    .instructions-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 25%;
+
+        padding: 1rem;
+        font-family: 'Netflix Sans';
+        color: black;
+    }
+}
+
+div#accordionExample {
+    margin: 0 auto;
+    width: 80vw;
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    border: none;
+}
+
+button.accordion-button {
+    background: #e2c044;
+}
+
+#collapseThree .image-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+        width: auto;
+    }
+}
+
+.accordion-body {
+    background-color: #D3D0CB;
+}
+
+// .tech-stack {
+//     display: flex;
+//     justify-content: space-between;
+// }
