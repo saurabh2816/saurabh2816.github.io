@@ -80,6 +80,7 @@ button.accordion-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     img {
         width: auto;
     }
@@ -93,3 +94,10 @@ button.accordion-button {
 //     display: flex;
 //     justify-content: space-between;
 // }
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 5rem;
+    color: white;
+    font-weight: 600;
+}
