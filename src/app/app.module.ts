@@ -41,7 +41,7 @@ import { ResumeComponent } from './resume/resume.component';
     SimpleModalModule,
     NgbModule
   ],
-  providers: [MovieService, { provide: LocationStrategy, useClass: PathLocationStrategy } ],
+  providers: [MovieService, { provide: LocationStrategy, useClass: HashLocationStrategy } ],
   bootstrap: [AppComponent],
   
 })
